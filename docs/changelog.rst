@@ -9,6 +9,11 @@ Changes in 0.10.7 - DEV
 - Add `signal_kwargs` argument to `Document.save`, `Document.delete` and `BaseQuerySet.insert` to be passed to signals calls #1206
 - Raise `OperationError` when trying to do a `drop_collection` on document with no collection set.
 - count on ListField of EmbeddedDocumentField fails. #1187
+- Fixed long fields stored as int32 in Python 3. #1253
+- MapField now handles unicodes keys correctly. #1267
+- ListField now handles negative indicies correctly. #1270
+- Fixed AttributeError when initializing EmbeddedDocument with positional args. #681
+- Fixed no_cursor_timeout error with pymongo 3.0+ #1304
 
 Changes in 0.10.6
 =================
